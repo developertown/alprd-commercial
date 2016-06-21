@@ -9,9 +9,7 @@ RUN \
   && echo "deb http://deb.openalpr.com/commercial/ trusty main" >> /etc/apt/sources.list.d/openalpr.list \
   && apt-get update && sudo apt-get -y install openalpr openalpr-daemon
 
-VOLUME ["/data/plates/images"]
-
-RUN apt-get -y install python
+VOLUME ["/var/lib/openalpr/plateimages"]
 
 COPY update_config.sh /
 COPY alprd.conf.template /

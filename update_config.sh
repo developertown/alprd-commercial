@@ -30,7 +30,7 @@ sed \
   -e "s/%COMPANY_ID%/${COMPANY_ID}/" \
   -e "s/%SITE_ID%/${SITE_ID}/" \
   -e "s/%ENABLE_PLATE_IMAGES%/${ENABLE_PLATE_IMAGES:-1}/" \
-  -e "s/%PLATE_IMAGES_PATH%/${PLATE_IMAGES_PATH}/" \
+  -e "s|%PLATE_IMAGES_PATH%|${PLATE_IMAGES_PATH:-/var/lib/openalpr/plateimages}|" \
   ${TEMPLATE} > "${OUTPUT}"
 
 echo "key=${LICENSE_KEY}" > /etc/openalpr/license.conf
