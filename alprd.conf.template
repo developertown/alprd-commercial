@@ -23,5 +23,5 @@ store_plates = %ENABLE_PLATE_IMAGES%
 store_plates_location = %PLATE_IMAGES_PATH%
 
 ; upload address is the destination to POST to
-upload_data = 0
-upload_address = http://localhost:9000/push/
+upload_data = %ENABLE_UPLOAD%
+upload_address = %UPLOAD_ADDRESS%

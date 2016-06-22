@@ -31,6 +31,8 @@ sed \
   -e "s/%SITE_ID%/${SITE_ID}/" \
   -e "s/%ENABLE_PLATE_IMAGES%/${ENABLE_PLATE_IMAGES:-1}/" \
   -e "s|%PLATE_IMAGES_PATH%|${PLATE_IMAGES_PATH:-/var/lib/openalpr/plateimages}|" \
+  -e "s/%ENABLE_UPLOAD%/${ENABLE_UPLOAD:-0}/" \
+  -e "s|%UPLOAD_ADDRESS%|${UPLOAD_ADDRESS:-http://localhost:9000}|" \
   ${TEMPLATE} > "${OUTPUT}"
 
 echo "key=${LICENSE_KEY}" > /etc/openalpr/license.conf
