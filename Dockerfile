@@ -13,6 +13,7 @@ VOLUME ["/var/lib/openalpr/plateimages"]
 
 COPY update_config.sh /
 COPY alprd.conf.template /
+COPY proxy.sh /
 
 ENTRYPOINT ["/update_config.sh"]
 CMD ["/usr/bin/alprd", "-ft"]
