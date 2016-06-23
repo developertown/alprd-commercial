@@ -7,13 +7,11 @@ RUN \
        supervisor \
        wget \
   && wget -O - http://deb.openalpr.com/openalpr.gpg.key | apt-key add - \
-  && echo "deb http://deb.openalpr.com/master/ openalpr main" > /etc/apt/sources.list.d/openalpr.list \
+  && echo "deb http://deb.openalpr.com/commercial/ trusty main" > /etc/apt/sources.list.d/openalpr.list \
   && apt-get update \
   && apt-get -y install \
        openalpr \
-       openalpr-daemon \
-       openalpr-utils \
-       libopenalpr-dev
+       openalpr-daemon
 
 VOLUME ["/var/lib/openalpr/plateimages"]
 

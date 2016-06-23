@@ -25,3 +25,15 @@ store_plates_location = %PLATE_IMAGES_PATH%
 ; upload address is the destination to POST to
 upload_data = %ENABLE_UPLOAD%
 upload_address = %UPLOAD_ADDRESS%
+
+
+plate_groups_enabled = 1
+plate_groups_time_delta_ms = 4500
+plate_groups_min_plates_to_group = 3
+
+store_plates_maxsize_mb = 8000
+store_plates_cleanup_interval_seconds = 120
+
+analysis_threads = 2
+
+camera_buffer_size = 60
