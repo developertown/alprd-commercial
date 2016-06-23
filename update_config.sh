@@ -48,9 +48,7 @@ echo "" >> ${OUTPUT}
 IFS=',' read -r -a CAMERAS <<< "$CAMERA_URLS"
 
 for c in "${CAMERAS[@]}"; do
-  echo "stream ${c}" >> ${OUTPUT}
+  echo "stream = ${c}" >> ${OUTPUT}
 done
-
-/proxy.sh 11300 beanstalkd 11300 &
 
 exec $@
