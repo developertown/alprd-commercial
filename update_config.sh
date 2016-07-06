@@ -20,6 +20,7 @@ if [ "$CAMERA_URLS" = "" ]; then
   exit 1
 fi
 
+
 echo "Updating config"
 
 TEMPLATE=alprd.conf.template
@@ -36,6 +37,10 @@ sed \
   ${TEMPLATE} > "${OUTPUT}"
 
 echo "key=${LICENSE_KEY}" > /etc/openalpr/license.conf
+
+if [ "$PREWARP" != ""]; then
+  echo "prewarp=$PREWARP"
+fi
 
 echo "" >> ${OUTPUT}
 echo "store_plates_maxsize_mb ${MAX_PLATES_MB:-250}" >> ${OUTPUT}
