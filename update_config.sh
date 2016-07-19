@@ -38,7 +38,7 @@ sed \
 
 echo "key=${LICENSE_KEY}" > /etc/openalpr/license.conf
 
-if [ "$PREWARP" != ""]; then
+if [ "$PREWARP" != "" ]; then
   echo "prewarp=$PREWARP"
 fi
 

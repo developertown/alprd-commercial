@@ -34,6 +34,4 @@ plate_groups_min_plates_to_group = 3
 store_plates_maxsize_mb = 8000
 store_plates_cleanup_interval_seconds = 120
 
-analysis_threads = 2
-
 camera_buffer_size = 60
