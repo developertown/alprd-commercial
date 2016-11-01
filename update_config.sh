@@ -43,10 +43,10 @@ if [ "$PREWARP" != "" ]; then
 fi
 
 echo "" >> ${OUTPUT}
-echo "store_plates_maxsize_mb ${MAX_PLATES_MB:-250}" >> ${OUTPUT}
+echo "store_plates_maxsize_mb = ${MAX_PLATES_MB:-250}" >> ${OUTPUT}
 
 echo "" >> ${OUTPUT}
-echo "analysis_threads ${ANALYSIS_THREADS:-2}" >> ${OUTPUT}
+echo "analysis_threads = ${ANALYSIS_THREADS:-2}" >> ${OUTPUT}
 
 echo "" >> ${OUTPUT}
 
