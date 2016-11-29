@@ -52,8 +52,10 @@ echo "" >> ${OUTPUT}
 
 IFS=',' read -r -a CAMERAS <<< "$CAMERA_URLS"
 
-for c in "${CAMERAS[@]}"; do
-  echo "stream = ${c}" >> ${OUTPUT}
+rm -f /etc/openalpr/stream.d/*
+for i in "${!CAMERAS[@]}"; do
+  echo "stream = ${CAMERAS[$i]}" > /etc/openalpr/stream.d/camera${i}.conf
+  echo "camera_id = ${i}" >> /etc/openalpr/stream.d/camera${i}.conf
 done
 
 exec $@
